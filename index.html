@@ -1,0 +1,78 @@
+<html ng-app="flipsnap">
+
+<head>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css">
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/underscore/underscore.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    
+            
+            </head>
+
+<body>
+    <div class="container" ng-controller="headerCtrl">
+        <custom-head><a href="#">aaa</a></custom-head>
+        <!--header-->
+<!--        <div ng-include="headerUrl"></div>-->
+        <!--Cotent-->
+        <div ng-include="contentUrl"></div>
+        <!--footer-->
+        <div ng-include=""></div>
+        
+    
+    </div>
+    <!--header files-->
+    <script src="app/header/header.js"></script>
+    <script src="app/header/headerCtrl.js"></script>
+    <!--end of header-->
+    
+        <!--Register files-->
+    <script src="app/register/register.js"></script>
+    <script src="app/register/registerCtrl.js"></script>
+    <!--end of register-->
+     <!--Shoe Product files-->
+    <script src="app/Shoes/shoe.js"></script>
+    <script src="app/Shoes/shoeCtrl.js"></script>
+    <script src="app/Shoes/shoeSvc.js"></script>
+    <!--end of register-->
+    
+    <!--LookUp files-->
+    <script src="app/lookup/lookup.js"></script>
+    <script src="app/lookup/lookupSvc.js"></script>
+    <!--end of login-->
+    <!--Custom Files-->
+    <script src="app/custom/custom.js"></script>
+    <script src="app/custom/customphone.js"></script>
+    <script src="app/custom/customDirecive.js"></script>
+    <!--end of custom files>
+    
+    
+     <!--Product files-->
+    
+    <script src="app/product/product.js"></script>
+    <script src="app/product/productctrl.js"></script>
+    <script src="app/product/productSvc.js"></script>
+<script src="app/product/productFactory.js"></script>
+
+    <!--end of product-->
+    
+    
+   <!--Cart files-->
+    <script src="app/cart1/cart.js"></script>
+    <script src="app/cart1/cartCtrl.js"></script>
+    <script src="app/cart1/cartSvc.js"></script>
+    <!--end of login-->
+    <!--Login files-->
+    <script src="app/login/login.js"></script>
+    <script src="app/login/loginCtrl.js"></script>
+    <!--end of login-->
+    
+    <!--main files-->
+    <script src="app/app.js"></script>
+    
+    <!--end of main-->
+</body>
+
+</html>

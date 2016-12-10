@@ -1,0 +1,26 @@
+<div ng-controller="shoeCtrl">
+    <h1> Shoe Products</h1>
+
+    
+    
+      <div class="container">
+        
+        <div class = "row" ng-repeat="data in shoeList">
+            <div class="col-xs-12 col-sm-4 col-md-6 col-lg-4" style="align:left">
+            <img ng-src="{{ data.Image }}" alt="shoes1" width=50% height=30%/>
+            {{data.Title}}
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-6 col-lg-4" style="align:center">
+            <p>{{data.Brand}}</p>
+            </div>
+             <div class="col-xs-12 col-sm-4 col-md-6 col-lg-4" style="align:right">
+            <p>{{data.Price}}</p>
+            </div>
+        </div>
+       
+    
+</div>
+
+</div>
+
+

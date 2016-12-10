@@ -1,0 +1,27 @@
+<h1>Login Form</h1>
+
+<div class="form-horizontal" ng-controller="loginCtrl as rc">
+    
+    <div class="form-group">
+        <label  class="control-label col-xs-2">User Name</label>
+        <div class="col-xs-4">
+            <input type="text" class="form-control"  placeholder="Enter User Name"
+                   ng-model="rc.user.username">
+        </div>
+    </div>
+    <div class="form-group">
+        <label  class="control-label col-xs-2">Password</label>
+        <div class="col-xs-4">
+            <input type="password" class="form-control"  placeholder="Enter Pass Word"
+                   ng-model="rc.user.password">
+        </div>
+    </div>
+    
+   
+    <div class="form-group">
+        <div class="col-xs-offset-2 col-xs-4">
+            <button ng-click="rc.login()" class="btn btn-primary">Log In</button>
+        </div>
+    </div>
+    {{user}}
+</div>

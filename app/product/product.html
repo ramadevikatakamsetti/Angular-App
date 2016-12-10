@@ -1,0 +1,59 @@
+<div ng-controller="productCtrl">
+    <h1> Products Page</h1>
+    <div class="row">
+        <div class= "col-md-2">
+            <input type="text" ng-model="SearchMake"  class="form-control" placeholder="Search by Make">
+        </div>
+        <div class="col-md-2">
+        <input type=text class="form-control" ng-model="SearchModel" placeholder="Search by Model">
+        
+        </div>
+        <button class="btn btn-primary" ng-click="country='IN'">India</button>
+        
+        <button class="btn btn-primary" ng-click="country='US'">US</button>
+            
+        <button class="btn btn-primary" ng-click="showMore()">Show More</button>
+        <button class="btn btn-primary" ng-click="showLess()">Show Less</button>
+            
+        
+    </div>
+    
+    <table class="table table-striped">
+        <tr>
+            <td>S.No</td>
+            <td> Make</td>
+            <td> Model Name</td>
+            <td> Year</td>
+            <td ng-click="sortByOrder()"><a href="">Price</a></td>
+            
+            <td> Contact</td>
+           <!-- <td ng-click="showMore()"><a href="">Show More</a></td>
+            <td ng-click="showLess()"><a href="">Show Less</a></td>-->
+        </tr>
+        
+       
+        <tr ng-repeat="vehicle in vehicleList |filter:{Make:SearchMake,Model:SearchModel}
+                                                |orderBy:orderByPrice
+                                                |limitTo:recordCount"}>
+            
+            
+            <td>{{$index+1}}</td>
+            <td>{{vehicle.Make}}</td>
+            <td>{{vehicle.Model}}</td>
+            <td>{{vehicle.Year}}</td>
+            <td>{{vehicle.Price|currency:"Rs."}}</td>
+            <td>{{vehicle.Contact|phoneFilter:country}}</td>
+            <td><button class="btn btn-primary" ng-if="!vehicle.selected" ng-click="addToCart(vehicle)">AddtoCart</button> </td>
+            <td><button class="btn btn-primary" ng-if="vehicle.selected" ng-click="removeCart(vehicle)">RemoveCart</button> </td>
+        </tr>
+        
+    
+    </table>
+            
+        </div>
+    
+
+
+
+
+
